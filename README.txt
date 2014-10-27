@@ -4,7 +4,7 @@ www.mugbot.com
 mugbot_web_v1.0.0_.html
 PC、タブレット、スマホのブラウザーから操作するマグボットの操作インタフェースです。
 
-mugbot_sever_v1.0.0_.rb
+mugbot_server_v1.0.0_.rb
 Raspberry Piの中に設置するRubyによるWebSocketサーバーです。
 
 mugbot_arduino_v1.0.0.ino
