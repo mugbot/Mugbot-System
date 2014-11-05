@@ -6,14 +6,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Mugbot Interface</title>
 
-<link href="jquery.mobile-1.1.0.min.css" rel="stylesheet" >
-<script src="jquery-1.7.2.min.js" type="text/javascript"></script>
-<script src="jquery.mobile-1.1.0.min.js" type="text/javascript"></script>
-
-<style>
-.containing-element .ui-slider-switch { width: 10em }
-</style>
-
+<link href="jquery.mobile-1.4.4.min.css" rel="stylesheet" >
+<script src="jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.4.4.min.js" type="text/javascript"></script>
 
 <script>
 $(function(){
@@ -247,14 +242,14 @@ $(function(){
 <body>
 <div data-role="page" id="page">
    <div data-role="header" data-theme="e">
-       <h1>Mugbot System 1.0.0</h1>
+       <h1>Mugbot System 1.0.1</h1>
    </div>
    <div data-role="content">
-   <!-- スライダーによる目、首、目の明るさ制御 -->
        <div data-role="fieldcontain">
           <label for="textinput">話す　:</label>
           <input type="text" name="textinput" id="input" />
        </div>
+       <!-- スライダーによる目、首、目の明るさ制御 -->
        <div data-role="fieldcontain">
           <label for="slider0">上下 :</label>
           <input type="range" name="slider0" id="slider0" value="90" min="75" max="105" />
