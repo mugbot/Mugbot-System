@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 #Mugbot Project Tokyo City University Koike Lab. 2014  
-#Mugbot System ver. 1.0.1.
+#Mugbot System ver. 1.0.0.
 
 require 'em-websocket'
 require 'serialport'
