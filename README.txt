@@ -1,11 +1,11 @@
 www.mugbot.com
 の「マグボットの作り方」に掲載しているソーシャルロボットマグボットの３つのソフトです。
 
-mugbot_web_v1.0.0_.html
+mugbot-web-1.1.html
 PC、タブレット、スマホのブラウザーから操作するマグボットの操作インタフェースです。
 
-mugbot_server_v1.0.0_.rb
+mugbot-server-1.1.rb
 Raspberry Piの中に設置するRubyによるWebSocketサーバーです。
 
-mugbot_arduino_v1.0.0.ino
-Arduinoのプログラムです。
+mugbot_arduino_1.1.ino
+Arduinoのプログラムです。右目をArduinoのUNOに対応するために13ピンから６ピンに変更しました。
