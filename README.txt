@@ -9,3 +9,4 @@ Raspberry Piの中に設置するRubyによるWebSocketサーバーです。
 
 mugbot_arduino_1.1.ino
 Arduinoのプログラムです。右目をArduinoのUNOに対応するために13ピンから６ピンに変更しました。
+また、MAD 1.1 (Mugbot Action Designer）に対応するために、「k」を受信すると、口のLEDのみを消灯するようにしました。
