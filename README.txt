@@ -13,6 +13,6 @@ mugbot_arduino_1.1.ino
 Arduinoのプログラムです。右目をArduinoのUNOに対応するために13ピンから６ピンに変更しました。
 また、MAD 1.1 (Mugbot Action Designer）に対応するために、「k」を受信すると、口のLEDのみを消灯するようにしました。
 
-mugtalk-1.0.sh
+mugbot-talk-1.1.sh
 Open JTalkによるマグボットの音声合成のシェルスクリプトです。
 Raspberry Piの/home/pi/に設置します。
