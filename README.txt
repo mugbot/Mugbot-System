@@ -1,11 +1,13 @@
 www.mugbot.com
-の「マグボットの作り方」に掲載しているソーシャルロボットマグボットの３つのソフトです。
+の「マグボットの作り方」に掲載しているソーシャルロボットマグボットの４つのソフトです。
 
 mugbot-web-1.1.html
 PC、タブレット、スマホのブラウザーから操作するマグボットの操作インタフェースです。
+Raspberry Piの/var/www/html/に設置します。
 
 mugbot-server-1.1.rb
-Raspberry Piの中に設置するRubyによるWebSocketサーバーです。
+RubyによるWebSocketサーバーです。
+Raspberry Piの/home/pi/に設置します。
 
 mugbot_arduino_1.1.ino
 Arduinoのプログラムです。右目をArduinoのUNOに対応するために13ピンから６ピンに変更しました。
@@ -13,3 +15,4 @@ Arduinoのプログラムです。右目をArduinoのUNOに対応するために
 
 mugtalk-1.0.sh
 Open JTalkによるマグボットの音声合成のシェルスクリプトです。
+Raspberry Piの/home/pi/に設置します。
