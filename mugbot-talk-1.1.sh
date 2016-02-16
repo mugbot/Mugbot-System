@@ -5,7 +5,7 @@ HTSVOICE=/usr/share/hts-voice/nitech-jp-atr503-m001/nitech_jp_atr503_m001.htsvoi
 DICDIRE=/var/lib/mecab/dic/open-jtalk/naist-jdic/
 VOICEDATA=/tmp/voice.wav
 echo "$1" | open_jtalk \
--x $DICDIRE 
+-x $DICDIRE \
 -m $HTSVOICE \
 -ow $VOICEDATA \
 -s 17000 \
