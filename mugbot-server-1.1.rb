@@ -55,7 +55,7 @@ EventMachine::WebSocket.start(:host => "0.0.0.0",:port => 51234) do |ws|
 
    else
      sp.putc  "t"
-     system(`mugbot-server-1.1.rb  #{msg}`)
+     system(`/home/pi/mugbot-server-1.1.rb  #{msg}`)
      sp.putc  "n"  
      # tをArduinoに送って口の点滅開始、発話させ、nを送って点滅終了 
    end
