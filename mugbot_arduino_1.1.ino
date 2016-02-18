@@ -9,10 +9,7 @@ static int pos = 0; //Arduinoのサーボの回転角度
 static int g = 0; //Webのスライダーの位置
 char ch = 0;
 
-
-int l_mouse = 7; //口LED左部（正面から見て）
-int m_mouse = 8; //口中央LED（正面から見て）
-int r_mouse = 9; //口LED右部（正面から見て）
+int mouse = 8; //口LED（３個）
 
 int l_eye = 11; //左目（正面から見て）
 int r_eye = 6; //右目（正面から見て）UNOに対応するために1.0.0の13から６に変更
@@ -37,16 +34,11 @@ void setup()
   //目、首、目の明るさの初期設定
   pinMode(l_eye, OUTPUT);
   pinMode(r_eye, OUTPUT);
-  pinMode(l_mouse, OUTPUT);
-  pinMode(m_mouse, OUTPUT);
-  pinMode(r_mouse, OUTPUT);
-
-
+  pinMode(mouse, OUTPUT);
+  
   analogWrite(l_eye, eye_light_default);
   analogWrite(r_eye, eye_light_default);
-  digitalWrite(l_mouse, LOW);
-  digitalWrite(m_mouse, LOW);
-  digitalWrite(r_mouse, LOW);
+  digitalWrite(mouse, LOW);
   eye_servo.write(eye_default);
   head_servo.write(head_default );
 }
@@ -87,9 +79,7 @@ void loop() {
 
       case 't': //Rasberry Piからtを受け取ると口が点滅し、発話時の動作を行う。
         delay( 2000 );
-        digitalWrite(l_mouse, HIGH);
-        digitalWrite(m_mouse, HIGH);
-        digitalWrite(r_mouse, HIGH);
+        digitalWrite(mouse, HIGH);
 
         for ( pos = eye_default; pos < 110; pos += 1 ) {
           eye_servo.write( pos );
@@ -110,9 +100,7 @@ void loop() {
       case 'n': //Rasberry Piからnを受け取ると首、目の標準位置に戻す。
         analogWrite(l_eye, eye_light_default);
         analogWrite(r_eye, eye_light_default);
-        digitalWrite(r_mouse, LOW);
-        digitalWrite(l_mouse, LOW);
-        digitalWrite(m_mouse, LOW);
+        digitalWrite(mouse, LOW);
 
         eye_servo.write(eye_default);
         head_servo.write(head_default);
@@ -121,10 +109,8 @@ void loop() {
       case 'l': //Rasberry Piからlを受け取ると「笑う」のアクションを行う。
         analogWrite(l_eye, eye_light_default);
         analogWrite(r_eye, eye_light_default);
+        digitalWrite(mouse, HIGH);
 
-        digitalWrite(l_mouse, HIGH);
-        digitalWrite(m_mouse, HIGH);
-        digitalWrite(r_mouse, HIGH);
         eye_servo.write( 120 );
         delay(100 );
         eye_servo.write( 100 );
@@ -157,9 +143,7 @@ void loop() {
         delay(100 );
         eye_servo.write( eye_default );
         delay(100 );
-        digitalWrite(r_mouse, LOW);
-        digitalWrite(l_mouse, LOW);
-        digitalWrite(m_mouse, LOW);
+        digitalWrite(mouse, LOW);
         break;
 
       case 's': //Rasberry Piからsを受け取ると「悲しい」のアクションを行う。
@@ -178,9 +162,8 @@ void loop() {
 
         analogWrite(l_eye, eye_light_default);
         analogWrite(r_eye, eye_light_default);
-        digitalWrite(r_mouse, LOW);
-        digitalWrite(l_mouse, LOW);
-        digitalWrite(m_mouse, LOW);
+        digitalWrite(mouse, LOW);
+
         break;
 
       case 'h': //Rasberry Piからhを受け取ると「はい」のアクションを行う。
@@ -279,9 +262,7 @@ void loop() {
           analogWrite(l_eye, eye_light_default);
           analogWrite(r_eye, eye_light_default);
           delay( 100 );
-          digitalWrite(l_mouse, LOW);
-          digitalWrite(m_mouse, LOW);
-          digitalWrite(r_mouse, LOW);
+          digitalWrite(mouse, LOW);
           delay( 100 );
         }
 
@@ -290,15 +271,11 @@ void loop() {
 
         analogWrite(l_eye, eye_light_default);
         analogWrite(r_eye, eye_light_default);
-        digitalWrite(r_mouse, LOW);
-        digitalWrite(l_mouse, LOW);
-        digitalWrite(m_mouse, LOW);
+        digitalWrite(mouse, LOW);
         break;
 
       case 'k': //Rasberry Piからkを受け取ると口のLEDのみを消灯
-        digitalWrite(r_mouse, LOW);
-        digitalWrite(l_mouse, LOW);
-        digitalWrite(m_mouse, LOW);
+        digitalWrite(mouse, LOW);
         break;
 
       default:
@@ -307,9 +284,7 @@ void loop() {
 
         analogWrite(l_eye, eye_light_default);
         analogWrite(r_eye, eye_light_default);
-        digitalWrite(r_mouse, LOW);
-        digitalWrite(l_mouse, LOW);
-        digitalWrite(m_mouse, LOW);
+        digitalWrite(mouse, LOW);
         break;
     }
   }
