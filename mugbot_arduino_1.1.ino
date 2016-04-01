@@ -246,10 +246,7 @@ void loop() {
 
       case 'e': //Rasberry Piからeを受け取ると「ハイテンション」のアクションを行う。
         for ( ch = 0; ch < 5; ch += 1 ) {
-          digitalWrite(l_mouse, HIGH);
-          digitalWrite(m_mouse, HIGH);
-          digitalWrite(r_mouse, HIGH);
-
+          digitalWrite(mouse, HIGH);
           analogWrite(l_eye, eye_light_default);
           digitalWrite(r_eye, LOW);
           delay( 100 );
