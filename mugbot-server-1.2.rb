@@ -56,8 +56,8 @@ EventMachine::WebSocket.start(:host => "0.0.0.0",:port => 51234) do |ws|
    else
      sp.putc  "t"
      system(`/home/pi/mugbot-talk-1.1.sh  #{msg}`)
-     sp.putc  "n"  
-     # tをArduinoに送って口の点滅開始、発話させ、nを送って点滅終了 
+     sp.putc  "k"  
+     # tをArduinoに送って口の点滅開始、発話させ、kを送って点滅終了 
    end
   }
 
